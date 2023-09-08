@@ -66,12 +66,12 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public LocalDate getfNacimiento() {
+    public LocalDate getfechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setfNacimiento(LocalDate fNacimiento) {
-        this.fechaNacimiento = fNacimiento;
+    public void setfechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public boolean isEstado() {
