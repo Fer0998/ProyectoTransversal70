@@ -5,10 +5,24 @@
  */
 package proyectotransversal70.AccesoADatos;
 
+import java.sql.Connection;
+
 /**
  *
  * @author 54911
  */
 public class MateriaData {
     
+    private Connection con=null;
+
+    public MateriaData() {
+
+        con= Conexion.getConexion();
+        
+    }
+
+ 
+        
+       
+        
 }
