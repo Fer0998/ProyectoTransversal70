@@ -5,7 +5,22 @@
  */
 package proyectotransversal70.AccesoADatos;
 
+import java.sql.Connection;
+
 public class InscripcionData {
+    private Connection con=null;
+    private MateriaData matData;
+    private AlumnoData aluData;
+
+    public InscripcionData() {
+        
+             con= Conexion.getConexion();
+        
+        
+    }
+    
+    
+    
     
     
 }
