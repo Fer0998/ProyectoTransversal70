@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -161,4 +163,37 @@ public void eliminarAlumno(int id){
         JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Alumno"+ex.getMessage());    
     }
     }
-    }// fin class
+//---------------------------------------------------------------------------------------------------------
+    
+    public List<Alumno> listarAlumnos(){
+    
+    String sql = "SELECT idAlumno,dni, apellido, nombre, fechaNacimiento FROM alumno WHERE estado =1";
+    ArrayList<Alumno> alumnos = new ArrayList<>();
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                
+               Alumno alumno = new Alumno();
+               alumno.setIdAlumno(rs.getInt("idAlumno"));
+               alumno.setDni(rs.getInt("dni"));
+               alumno.setApellido(rs.getString("apellido"));
+               alumno.setNombre(rs.getString("nombre"));              
+               alumno.setfechaNacimiento(rs.getDate("fechaNacimiento").toLocalDate());
+               alumno.setEstado(true);        
+               
+               alumnos.add(alumno);
+            }
+            
+            ps.close();
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Error al acceder a la tabla Alumno"+ex.getMessage());
+        }
+        
+        return alumnos;
+}
+    
+}// fin class
