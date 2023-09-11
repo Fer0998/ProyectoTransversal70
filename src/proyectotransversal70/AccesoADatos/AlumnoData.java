@@ -43,7 +43,7 @@ public class AlumnoData {
             ResultSet rs = ps.getGeneratedKeys();
             
             if (rs.next()){
-                alumno.setId(rs.getInt(1));
+                alumno.setIdAlumno(rs.getInt(1));
                 JOptionPane.showMessageDialog(null,"Alumno agregado");
             }
             
@@ -85,11 +85,25 @@ public Alumno buscarAlumno(int id){
         return alumno;
 }  
 //---------------------------------------------------------------------------------------------------------
-   
-    
-    
-    
-    
-    
-    
+public void eliminarAlumno(int id){
+
+    String sql = "UPDATE alumno SET estado = 0 WHERE idAlumno = ?";
+    PreparedStatement ps = null;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            
+            int fila = ps.executeUpdate();
+            
+            if(fila == 1){
+                JOptionPane.showMessageDialog(null,"Se eliminó el alumno.");                           
+            }
+            ps.close();
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Error al acceder a la tabla Alumno"+ex.getMessage());
+        }
+}
+//---------------------------------------------------------------------------------------------------------
+
 }// fin class
