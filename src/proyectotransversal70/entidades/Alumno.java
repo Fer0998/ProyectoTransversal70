@@ -5,28 +5,28 @@ import java.time.LocalDate;
 
 
 public class Alumno {
-      private int id;
+    private int idAlumno;
     private int dni;
     private String apellido;
     private String nombre;
     private LocalDate fechaNacimiento;
     private boolean estado;
 //-----------------------------------------------------------------------------------------------------------
-    public Alumno(int id, int dni, String apellido, String nombre, LocalDate fNacimiento, boolean estado) {
-        this.id = id;
+    public Alumno(int idAlumno, int dni, String apellido, String nombre, LocalDate fechaNacimiento, boolean estado) {
+        this.idAlumno = idAlumno;
         this.dni = dni;
         this.apellido = apellido;
         this.nombre = nombre;
-        this.fechaNacimiento = fNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
         this.estado = estado;
     }
 //-----------------------------------------------------------------------------------------------------------
-    public Alumno(int dni, String apellido, String nombre, LocalDate fNacimiento, boolean estado) {
+    public Alumno(int dni, String apellido, String nombre, LocalDate fechaNacimiento, boolean estado) {
         
         this.dni = dni;
         this.apellido = apellido;
         this.nombre = nombre;
-        this.fechaNacimiento = fNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
         this.estado = estado;
     }
 //-----------------------------------------------------------------------------------------------------------
@@ -34,12 +34,12 @@ public class Alumno {
     
 //-----------------------------------------------------------------------------------------------------------
 
-    public int getId() {
-        return id;
+    public int getIdAlumno() {
+        return idAlumno;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdAlumno(int idAlumno) {
+        this.idAlumno = idAlumno;
     }
 
     public int getDni() {
@@ -87,7 +87,7 @@ public class Alumno {
     public String toString() {
          return "Alumno\n"+
                 "-------------------------"+"\n"+
-                "Id       = " + id +"\n"+ 
+                "idAlumno = " + idAlumno +"\n"+ 
                 "Dni      = " + dni +"\n"+ 
                 "Apellido = " + apellido +"\n"+ 
                 "Nombre   = " + nombre + "\n"+
@@ -95,5 +95,6 @@ public class Alumno {
                 "Estado   = " + estado +"\n"+
                 "-------------------------";
     }
+ 
     
 }// fin class
