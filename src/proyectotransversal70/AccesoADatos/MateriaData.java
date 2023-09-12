@@ -18,10 +18,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import proyectotransversal70.entidades.Materia;
 
-/**
- *
- * @author 54911
- */
+
 public class MateriaData {
     
     private Connection con=null;
