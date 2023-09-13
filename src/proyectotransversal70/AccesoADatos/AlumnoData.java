@@ -55,7 +55,7 @@ public class AlumnoData {
         
     }
  //--------------------------------------------------------------------------------------
-public Alumno buscarAlumno(int id){
+public Alumno buscarAlumno(int id){// este es void AVISARRRRRR
     
     Alumno alumno= null;
     String sql = "SELECT dni, apellido, nombre, fechaNacimiento FROM alumno WHERE idAlumno=? AND estado =1";
@@ -169,6 +169,7 @@ public void eliminarAlumno(int id){
     
     String sql = "SELECT idAlumno,dni, apellido, nombre, fechaNacimiento FROM alumno WHERE estado =1";
     ArrayList<Alumno> alumnos = new ArrayList<>();
+    
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             

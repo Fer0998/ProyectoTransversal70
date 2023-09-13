@@ -30,7 +30,7 @@ public class MateriaData {
     }
   public void guardarMateria(Materia materia){
        
-     String sql= "INSERT INTO materia(nombre,anio,estado)"
+     String sql= "INSERT INTO materia(nombre,año,estado)"
              + "VALUES (?,?,?)";
      
       try {
@@ -57,7 +57,7 @@ public class MateriaData {
   public Materia buscarMateria (int id){
   
         Materia materia=null;
-        String sql= "SELECT nombre, anio, estado FROM materia WHERE idMateria=?";
+        String sql= "SELECT nombre, año, estado FROM materia WHERE idMateria=?";
         PreparedStatement ps=null;
             try {
             ps=con.prepareStatement(sql);
@@ -69,7 +69,7 @@ public class MateriaData {
                 materia=new Materia();
                 materia.setIdMateria(id);
                 materia.setNombre(rs.getString("nombre"));
-                materia.setAnioMateria(rs.getInt("anio"));
+                materia.setAnioMateria(rs.getInt("año"));
                 materia.setActivo(true);
             }else{
                 JOptionPane.showMessageDialog(null,"No existe la materia");
@@ -84,7 +84,7 @@ public class MateriaData {
   
   public void modificarMateria(Materia materia){
   
-  String sql= "UPDATE materia SET nombre=?,anio=?,estado=? WHERE idMateria=?";
+  String sql= "UPDATE materia SET nombre=?,año=?,estado=? WHERE idMateria=?";
   PreparedStatement ps=null;
   
   try {
@@ -130,7 +130,7 @@ public class MateriaData {
   
   public List<Materia> listarMaterias(){
     
-    String sql = "SELECT nombre, anio, estado FROM materia WHERE estado =1";
+    String sql = "SELECT nombre, año, estado FROM materia WHERE estado =1";
     ArrayList<Materia> materias = new ArrayList<>();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -142,7 +142,7 @@ public class MateriaData {
                Materia materia = new Materia();
                materia.setIdMateria(rs.getInt("idMateria"));
                materia.setNombre(rs.getString("nombre"));              
-               materia.setAnioMateria(rs.getInt("Anio"));
+               materia.setAnioMateria(rs.getInt("Año"));
                materia.setActivo(true);        
                
                materias.add(materia);

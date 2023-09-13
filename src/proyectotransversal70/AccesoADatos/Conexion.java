@@ -22,8 +22,8 @@ public class Conexion {
     public static Connection getConexion(){
         if(connection==null){
             try {
-                Class.forName("org.mariadb.jdbc.Driver");
-                connection=DriverManager.getConnection(URL+DB,USUARIO,PASSWORD);
+                Class.forName("org.mariadb.jdbc.Driver");//invoco el driver
+                connection=DriverManager.getConnection(URL+DB,USUARIO,PASSWORD);//
                 
                 JOptionPane.showMessageDialog(null, "Base de datos connectada");
                 
