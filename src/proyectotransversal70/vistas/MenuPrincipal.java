@@ -46,6 +46,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         escritorio.setPreferredSize(new java.awt.Dimension(700, 600));
         escritorio.setPreferredSize(new java.awt.Dimension(700, 600));
+        escritorio.setLayout(null);
 
         jMenu2.setText("Alumno");
 
