@@ -110,6 +110,10 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="setTitle(&quot;Gesti&#xf3;n \&quot;Universidad\&quot;&quot;);&#xa;&#xa;        escritorio.setPreferredSize(new java.awt.Dimension(700, 600));"/>
       </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
     </Container>
   </SubComponents>
 </Form>
