@@ -5,10 +5,9 @@
  */
 package proyectotransversal70.vistas;
 
-/**
- *
- * @author fernandoalvarez
- */
+import proyectotransversal70.Vistas.FormularioDeInscripcion;
+
+
 public class MenuPrincipal extends javax.swing.JFrame {
 
     /**
@@ -46,11 +45,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         escritorio.setPreferredSize(new java.awt.Dimension(700, 600));
         escritorio.setPreferredSize(new java.awt.Dimension(700, 600));
-        escritorio.setLayout(null);
 
         jMenu2.setText("Alumno");
 
         jMenuItem1.setText("Formulario de Alumno");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem1);
 
         jMenuBar1.add(jMenu2);
@@ -65,6 +68,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenu1.setText("Administracion");
 
         jMenuItem3.setText("Manejo de inscripciones");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setText("Manipulación de notas");
@@ -97,6 +105,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormularioDeInscripcion formI = new FormularioDeInscripcion();
+        formI.setVisible(true);
+        escritorio.add(formI);//agrega la ventana al escri
+        escritorio.moveToFront(formI);//trae al frente la ventana
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments

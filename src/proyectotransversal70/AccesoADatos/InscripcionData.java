@@ -129,7 +129,7 @@ public class InscripcionData {
 
         String sql = "SELECT inscripcion.idMateria, nombre,año FROM inscripcion,"
                 + " materia  WHERE inscripcion.idMateria= materia.idMateria"
-                + "AND inscripcion.idAlumno=? ";
+                + " AND inscripcion.idAlumno=? ";
         // EL PROFE NO USA JOIN PRODUCTO CARTESIANO'????????JAJAJA
         
         try {

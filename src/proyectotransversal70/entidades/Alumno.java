@@ -85,15 +85,16 @@ public class Alumno {
 //-----------------------------------------------------------------------------------------------------------
     @Override
     public String toString() {
-         return "Alumno\n"+
-                "-------------------------"+"\n"+
-                "idAlumno = " + idAlumno +"\n"+ 
-                "Dni      = " + dni +"\n"+ 
-                "Apellido = " + apellido +"\n"+ 
-                "Nombre   = " + nombre + "\n"+
-                "Fecha Na = " + fechaNacimiento +"\n"+ 
-                "Estado   = " + estado +"\n"+
-                "-------------------------";
+         return 
+              //  "-------------------------"+"\n"+
+            //    "idAlumno = " + idAlumno +"\n"+ 
+             //  "Dni      = " + dni +"\n"+ 
+                apellido +", "+ nombre +  ", " + dni ;
+              //  "Nombre: " + +
+                // "Dni:" ++"\n" ;
+            //    "Fecha Na = " + fechaNacimiento +"\n"+ 
+            //    "Estado   = " + estado +"\n"+
+             
     }
  
     
